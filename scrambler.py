@@ -24,25 +24,6 @@ def select_mode():
 				return mode
 
 
-def get_key():
-	while True:
-		key = input("Enter encrypt key (digit): ")
-		try:
-			key = int(key)
-		except ValueError:
-			clear()
-			print("Invalid value! Please enter a number!")
-		else:
-			if key <= 0:
-				clear()
-				print("The key can't be a <= 0! Only integer positive number!")
-			elif key > 1000000:
-				clear()
-				print("Invalid number! Max value is reached!")
-			else:
-				return key 
-
-
 def get_phrase(mode):
 	phrase = ""
 	while not phrase:
